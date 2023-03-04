@@ -13,6 +13,11 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
+
 # include <stdarg.h>
 # include <string.h>
 # include <stdio.h>
@@ -22,15 +27,10 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-#endif
-
 char    *get_next_line(int fd);
 char    *catbuffer(char *checkpoint, const char *buffer, int tosize);
 
 int getsize(const char *buffer, int end);
 int search_end(char *buffer);
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 2
 
 #endif

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_hexa.c ft_opc.c ft_printf.c
+SRCS			=	
 
 NAME			=	libftprintf.a
 
