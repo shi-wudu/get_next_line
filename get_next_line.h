@@ -13,14 +13,24 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+# include <stdarg.h>
+# include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+
+#endif
+
+char    *get_next_line(int fd);
+char    *catbuffer(char *checkpoint, const char *buffer, int tosize);
+
+int getsize(const char *buffer, int end);
+int search_end(char *buffer);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 2
-# endif
-
-char    *get_next_line(int fd)
 
 #endif
